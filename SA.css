@@ -1,0 +1,110 @@
+/* Custom styles for the dark-gothic portfolio */
+:root{
+  --bg:#0b0b0b;
+  --panel:#0f0f10;
+  --muted:#9ca3af;
+  --accent:#7f0910; /* dark red */
+}
+
+body{
+  background-image: radial-gradient(circle at 10% 10%, rgba(127,9,16,0.03), transparent 10%),
+                    radial-gradient(circle at 90% 90%, rgba(0,0,0,0.06), transparent 20%),
+                    linear-gradient(180deg, rgba(0,0,0,0.25), transparent 50%);
+  background-color: var(--bg);
+}
+
+/* Slight texture overlay */
+body::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.03"/></svg>');
+}
+
+/* Make headings slightly ornamented */
+h1,h2,h3,h4{ letter-spacing: 0.6px }
+
+.prose a{ color: var(--accent) }
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .font-uncial{ font-size: 1.2rem }
+}
+
+/* Skill tag styles */
+.skill-tag{
+  background: var(--panel);
+  border: 1px solid rgba(148, 163, 184, 0.06);
+  padding: .5rem .75rem;
+  border-radius: .375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e6e6e6;
+}
+.skill-icon{
+  display: inline-block;
+  margin-right: 0.4rem;
+  font-size: 1.1em;
+  opacity: 0.85;
+}
+
+/* Reveal animation with enhanced effects */
+.reveal{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 650ms cubic-bezier(.2,.9,.2,1), transform 650ms cubic-bezier(.2,.9,.2,1);
+}
+.reveal.revealed{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for child elements */
+.reveal-stagger > *{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 550ms cubic-bezier(.2,.9,.2,1), transform 550ms cubic-bezier(.2,.9,.2,1);
+}
+.reveal-stagger.revealed > *:nth-child(1){ transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(2){ transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(3){ transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(4){ transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(5){ transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(6){ transition-delay: 480ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(7){ transition-delay: 560ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(8){ transition-delay: 640ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(9){ transition-delay: 720ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.revealed > *:nth-child(n+10){ transition-delay: 800ms; opacity: 1; transform: translateY(0); }
+
+/* Fade-in from left for header/hero */
+.fade-left{
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.fade-left.revealed{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in from right */
+.fade-right{
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.fade-right.revealed{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Center last project card when odd number of cards */
+@media (min-width: 768px) {
+  .projects-grid > article:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
