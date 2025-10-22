@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Phe — Portfolio</title>
+    <!-- Tailwind via CDN (play-cdn) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Customizations -->
+    <link rel="stylesheet" href="SA.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0b0b0b] text-gray-200 font-sans leading-relaxed">
+  <div class="min-h-screen container mx-auto px-6 py-12">
+      <!-- Header / Nav -->
+      <header class="flex items-center justify-between mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-wide text-gray-100 flex items-center">
+          <button id="mobile-menu-button" class="md:hidden mr-3 p-2 rounded-md text-gray-300 hover:text-red-400 focus:outline-none">☰</button>
+          <span class="mr-3 text-4xl text-red-700 opacity-90">✦</span>
+          <span class="font-uncial">SA's Protfolio</span>
+        </h1>
+        <nav id="main-nav" class="hidden md:block">
+          <ul class="flex gap-6 text-sm md:text-base uppercase text-gray-400">
+            <li><a href="#about" class="hover:text-red-500">About</a></li>
+            <li><a href="#projects" class="hover:text-red-500">Work</a></li>
+            <li><a href="#skills" class="hover:text-red-500">Skills</a></li>
+            <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Mobile nav (slides down) -->
+      <div id="mobile-nav" class="md:hidden bg-[#0a0a0a] border border-gray-800 rounded-md p-4 mb-6 hidden">
+        <ul class="flex flex-col gap-3 uppercase text-gray-400">
+          <li><a href="#about" class="hover:text-red-500">About</a></li>
+          <li><a href="#projects" class="hover:text-red-500">Work</a></li>
+          <li><a href="#skills" class="hover:text-red-500">Skills</a></li>
+          <li><a href="#contact" class="hover:text-red-500">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Hero -->
+      <section class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Hi — I'm Saidouni Amel.</h2>
+          <p class="text-lg text-gray-300 max-w-xl">A third-year student at the National School of Artificial Intelligence with a passion for AI, cybersecurity, and emerging technologies. Always eager to learn new skills and explore innovative solutions.</p>
+          <div class="mt-6 flex gap-4">
+            <a href="#projects" class="inline-block bg-red-700/90 hover:bg-red-600 text-white px-4 py-2 rounded-md">See work</a>
+            <a href="#contact" class="inline-block border border-gray-600 hover:border-red-600 px-4 py-2 rounded-md text-gray-200">Contact</a>
+          </div>
+        </div>
+        <div class="hidden md:flex justify-center">
+          <div class="w-64 h-64 bg-gradient-to-br from-[#0f0f0f] to-[#1b0b0b] rounded-full border-2 border-red-900 shadow-xl flex items-center justify-center relative overflow-hidden">
+            <!-- Animated gradient background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-red-950/30 animate-pulse"></div>
+            <!-- Icon/Avatar -->
+            <div class="text-center z-10">
+              <div class="text-red-600 text-7xl font-bold font-uncial mb-2">SA</div>
+              <p class="text-gray-400 text-sm italic">Saidouni Amel</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="mb-12">
+        <h3 class="text-2xl font-semibold text-gray-100 mb-4">About</h3>
+        <div class="prose prose-invert max-w-none text-gray-300">
+          <p>I'm Saidouni Amel, a third-year student at the National School of Artificial Intelligence. My journey in tech is driven by a deep curiosity and ambition to master emerging fields like AI and cybersecurity. I thrive on challenges and am always motivated to expand my skill set, whether it's diving into machine learning algorithms, exploring secure systems, or learning new programming paradigms. Beyond academics, I'm passionate about building projects that solve real-world problems and contribute to innovative solutions.</p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+  <section id="projects" class="mb-12">
+        <h3 class="text-2xl font-semibold text-gray-100 mb-6">Projects</h3>
+        <div class="grid md:grid-cols-2 gap-6 projects-grid">
+          <!-- Train_Gain Project Card -->
+          <article class="bg-[#0f0f10] border border-gray-800 rounded-lg p-6 hover:border-red-700 transition">
+            <!-- Project Image/Mockup -->
+            <div class="mb-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden border border-gray-700">
+              <img src="images/traingain.png" alt="Train_Gain project mockup" class="w-full h-full object-cover object-top" />
+            </div>
+            <h4 class="text-xl font-semibold text-gray-100 mb-2">Train_Gain — Fitness & Health Platform</h4>
+            <p class="text-gray-300 mb-3">A comprehensive full-stack fitness and health website designed for individuals aged 16+ who are passionate about achieving their fitness goals. The platform offers personalized workout plans, detailed nutrition guidance, interactive progress tracking, and a supportive community.</p>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400 mb-2"><span class="text-red-500 font-semibold">Key Features:</span></p>
+              <ul class="text-sm text-gray-300 space-y-1 ml-4">
+                <li>• 3D interactive body model for exploring muscle groups</li>
+                <li>• Personalized workout & nutrition plans</li>
+                <li>• Gamified rewards system with points & achievements</li>
+                <li>• Community forums and coaching services</li>
+                <li>• Responsive design for mobile, tablet, and desktop</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech Stack:</span> React (Frontend), PHP (Backend), Three.js (3D visualization), Full-stack design & development</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-sm text-red-500 hover:underline" href="#" aria-label="View Train_Gain live demo">Live demo</a>
+              <a class="text-sm text-gray-400 hover:underline" href="#" aria-label="View Train_Gain source code">Source code</a>
+            </div>
+          </article>
+
+          <!-- MIRASENS Internship Card -->
+          <article class="bg-[#0f0f10] border border-gray-800 rounded-lg p-6 hover:border-red-700 transition">
+            <!-- Project Image/Mockup -->
+            <div class="mb-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden border border-gray-700">
+              <a href="https://mirasens.com" target="_blank" rel="noopener noreferrer" class="block">
+                <img src="images/mira.png" 
+                     alt="MIRASENS website preview" 
+                     class="w-full h-full object-cover object-top hover:opacity-90 transition" 
+                     loading="lazy" />
+              </a>
+            </div>
+            <h4 class="text-xl font-semibold text-gray-100 mb-2">MIRASENS — IoT Solutions Internship</h4>
+            <p class="text-gray-300 mb-3">Comprehensive internship experience working with IoT devices and web development. Contributed to the complete translation of the mirasens.com website, integrated an AI chatbot, and gained hands-on experience with IoT protocols and sensor manipulation.</p>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400 mb-2"><span class="text-red-500 font-semibold">Key Contributions:</span></p>
+              <ul class="text-sm text-gray-300 space-y-1 ml-4">
+                <li>• Complete website translation and localization</li>
+                <li>• AI chatbot integration for customer support</li>
+                <li>• IoT device manipulation and sensor management</li>
+                <li>• Website design improvements and deployment</li>
+                <li>• MQTT protocol implementation</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech Stack:</span> IoT Devices, MQTT Protocol, Sensors, Web Development, Chatbot Integration, Deployment</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-sm text-red-500 hover:underline" href="https://mirasens.com" target="_blank" rel="noopener noreferrer" aria-label="Visit MIRASENS website">Visit Site</a>
+              <a class="text-sm text-gray-400 hover:underline" href="#" aria-label="View internship details">Details</a>
+            </div>
+          </article>
+
+          <!-- AI Fitness Planner - School Project -->
+          <article class="bg-[#0f0f10] border border-gray-800 rounded-lg p-6 hover:border-red-700 transition">
+            <!-- Project Image/Mockup -->
+            <div class="mb-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden border border-gray-700">
+              <img src="images/planner.jpg" alt="AI Fitness Planner project" class="w-full h-full object-cover object-top" />
+            </div>
+            <h4 class="text-xl font-semibold text-gray-100 mb-2">AI Fitness Planner — Smart Workout Generator</h4>
+            <p class="text-gray-300 mb-3">An intelligent fitness platform that leverages classical AI search algorithms to generate optimized workout plans based on user constraints, goals, and available equipment. A school project demonstrating practical applications of artificial intelligence in health and fitness.</p>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400 mb-2"><span class="text-red-500 font-semibold">Key Features:</span></p>
+              <ul class="text-sm text-gray-300 space-y-1 ml-4">
+                <li>• Different search algorithms for optimal workout scheduling</li>
+                <li>• Constraint satisfaction for personalized plans</li>
+                <li>• Smart recommendations based on user goals</li>
+                <li>• Dynamic plan adjustment based on equipment availability</li>
+                <li>• Adaptive difficulty and progression tracking</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech Stack:</span> React (Frontend), Flask (Backend), Python (AI Algorithms), A* Search, Constraint Satisfaction Problem (CSP)</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-sm text-red-500 hover:underline" href="#" aria-label="View AI Fitness Planner demo">Live demo</a>
+              <a class="text-sm text-gray-400 hover:underline" href="#" aria-label="View AI Fitness source code">Source code</a>
+            </div>
+          </article>
+          <!-- Add more cards as needed -->
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="mb-12">
+        <h3 class="text-2xl font-semibold text-gray-100 mb-4">Skills</h3>
+        <p class="text-gray-300 mb-4">List your skills, tools, and technologies below. Leave blanks to fill in:</p>
+        <ul class="grid grid-cols-2 md:grid-cols-4 gap-3 text-gray-200" id="skills-list">
+          <li class="skill-tag"><span class="skill-icon">⚛️</span> React</li>
+          <li class="skill-tag"><span class="skill-icon">🐍</span> Django (basic)</li>
+          <li class="skill-tag"><span class="skill-icon">🌐</span> HTML</li>
+          <li class="skill-tag"><span class="skill-icon">🎨</span> CSS</li>
+          <li class="skill-tag"><span class="skill-icon">💨</span> Tailwind CSS</li>
+          <li class="skill-tag"><span class="skill-icon">⚡</span> JavaScript</li>
+          <li class="skill-tag"><span class="skill-icon">🐘</span> PHP</li>
+          <li class="skill-tag"><span class="skill-icon">⚙️</span> C++</li>
+          <li class="skill-tag"><span class="skill-icon">☕</span> Java</li>
+          <li class="skill-tag"><span class="skill-icon">🔧</span> Three.js (Basic)</li>
+          <li class="skill-tag"><span class="skill-icon">📡</span> IoT (Basic)</li>
+          <li class="skill-tag"><span class="skill-icon">🔌</span> MQTT Protocol</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mb-12">
+        <h3 class="text-2xl font-semibold text-gray-100 mb-4">Contact</h3>
+        <p class="text-gray-300 mb-4">Email: <a href="mailto:amel.saidouni@ensia.edu.dz" class="text-red-500 hover:text-red-400 underline transition">amel.saidouni@ensia.edu.dz</a></p>
+        <div class="flex gap-4 items-center">
+          <a href="https://www.linkedin.com/in/amel-saidouni-2127022b9/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gray-300 hover:text-red-500 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/meldoyinmyhead" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gray-300 hover:text-red-500 transition">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </section>
+
+      <footer class="border-t border-gray-800 pt-6 text-sm text-gray-500">Made with a dark heart and red accents.</footer>
+    </div>
+  <script src="SA.js"></script>
+  </body>
+  <style>
+    /* Tailwind custom font family */
+    .font-uncial { font-family: 'Uncial Antiqua', serif; }
+  </style>
+</html>
