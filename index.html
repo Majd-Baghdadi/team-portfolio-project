@@ -289,7 +289,7 @@
             font-weight: 500;
         }
 
-        /* Portfolio Button */
+        /* Portfolio Button - Now as link */
         .portfolio-btn {
             background: linear-gradient(45deg, var(--primary), var(--primary-dark));
             color: white;
@@ -312,6 +312,7 @@
             justify-content: center;
             gap: 8px;
             margin-top: auto;
+            text-decoration: none;
         }
 
         .portfolio-btn::before {
@@ -337,12 +338,6 @@
 
         .portfolio-btn:active {
             transform: translateY(0);
-        }
-
-        .portfolio-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
         }
 
         /* Footer */
@@ -522,23 +517,6 @@
             }
         }
 
-        /* Loading Animation */
-        @keyframes pulse {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .loading {
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-
         /* Scroll animations */
         .scroll-animate {
             opacity: 0;
@@ -582,143 +560,77 @@
                 <!-- Member 1 -->
                 <div class="member-card scroll-animate">
                     <div class="member-avatar">
-                        <div class="avatar-circle">AD</div>
+                        <div class="avatar-circle">MB</div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Madjd Baghdadi</h3>
-                        
                     </div>
-                    <button class="portfolio-btn">
-                        <i class="madjd-baghdadi.html"></i>
+                    <a href="madjd-baghdadi.html" class="portfolio-btn">
+                        <i class="fas fa-external-link-alt"></i>
                         See Portfolio
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Member 2 -->
                 <div class="member-card scroll-animate">
                     <div class="member-avatar">
-                        <div class="avatar-circle">SC</div>
+                        <div class="avatar-circle">DZ</div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Dhiaa Zeroual</h3>
-                       
                     </div>
-                    <button class="portfolio-btn">
-                        <i class="dhia.html"></i>
+                    <a href="dhia.html" class="portfolio-btn">
+                        <i class="fas fa-external-link-alt"></i>
                         See Portfolio
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Member 3 -->
                 <div class="member-card scroll-animate">
                     <div class="member-avatar">
-                        <div class="avatar-circle">MB</div>
+                        <div class="avatar-circle">AB</div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Aimene Boughenama</h3>
-                    
                     </div>
-                    <button class="portfolio-btn">
+                    <a href="aimene-boughenama.html" class="portfolio-btn">
                         <i class="fas fa-external-link-alt"></i>
                         See Portfolio
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Member 4 -->
                 <div class="member-card scroll-animate">
                     <div class="member-avatar">
-                        <div class="avatar-circle">JD</div>
+                        <div class="avatar-circle">AS</div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Amel Saidouni</h3>
-                      
                     </div>
-                    <button class="portfolio-btn">
-                        <i class="amel-saidouni.html"></i>
+                    <a href="amel-saidouni.html" class="portfolio-btn">
+                        <i class="fas fa-external-link-alt"></i>
                         See Portfolio
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Member 5 -->
                 <div class="member-card scroll-animate">
                     <div class="member-avatar">
-                        <div class="avatar-circle">DT</div>
+                        <div class="avatar-circle">IT</div>
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Imene Tifour</h3>
                     </div>
-                    <button class="portfolio-btn">
-                        <i class="imene_tifour.html"></i>
+                    <a href="imene_tifour.html" class="portfolio-btn">
+                        <i class="fas fa-external-link-alt"></i>
                         See Portfolio
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
-
-
+    </div>
 
     <script>
-        // Add interactivity to portfolio buttons
-        document.querySelectorAll('.portfolio-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const memberCard = this.closest('.member-card');
-                const memberName = memberCard.querySelector('.member-name').textContent;
-
-                // Show loading state
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-                this.disabled = true;
-
-                // Simulate portfolio loading
-                setTimeout(() => {
-                    // Create a modal for portfolio
-                    const modal = document.createElement('div');
-                    modal.style.cssText = `
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: rgba(15, 23, 42, 0.9);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        z-index: 1000;
-                        backdrop-filter: blur(5px);
-                    `;
-                    
-                    const modalContent = document.createElement('div');
-                    modalContent.style.cssText = `
-                        background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
-                        padding: 40px;
-                        border-radius: 20px;
-                        text-align: center;
-                        max-width: 500px;
-                        width: 90%;
-                        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-                        border: 1px solid rgba(99, 102, 241, 0.3);
-                        position: relative;
-                    `;
-                    
-                    modalContent.innerHTML = `
-                        <h3 style="margin-bottom: 20px; color: #f8fafc; font-size: 1.8rem;">${memberName}'s Portfolio</h3>
-                        <p style="margin-bottom: 30px; color: #94a3b8;">This would display the portfolio details in a real application.</p>
-                        <button id="close-modal" style="background: linear-gradient(45deg, #6366f1, #4f46e5); color: white; border: none; padding: 12px 30px; border-radius: 12px; cursor: pointer; font-weight: 600;">Close</button>
-                    `;
-                    
-                    modal.appendChild(modalContent);
-                    document.body.appendChild(modal);
-                    
-                    // Close modal functionality
-                    document.getElementById('close-modal').addEventListener('click', () => {
-                        document.body.removeChild(modal);
-                        this.innerHTML = originalText;
-                        this.disabled = false;
-                    });
-                }, 1000);
-            });
-        });
-
         // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
