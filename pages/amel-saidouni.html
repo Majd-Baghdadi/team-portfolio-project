@@ -7,7 +7,7 @@
     <!-- Tailwind via CDN (play-cdn) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Customizations -->
-    <link rel="stylesheet" href="SA.css" />
+    <link rel="stylesheet" href="../assets/css/SA.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -43,8 +43,8 @@
       <!-- Hero -->
       <section class="grid md:grid-cols-2 gap-8 items-center mb-16">
         <div>
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Hi — I'm Saidouni Amel.</h2>
-          <p class="text-lg text-gray-300 max-w-xl">A third-year student at the National School of Artificial Intelligence with a passion for AI, cybersecurity, and emerging technologies. Always eager to learn new skills and explore innovative solutions.</p>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">Saidouni Amel</h2>
+          <p class="text-lg text-gray-300 max-w-xl">A third-year student at the National School of Artificial Intelligence with a passion for various emerging technologies such as AI. Always eager to learn new skills and explore innovative solutions.</p>
           <div class="mt-6 flex gap-4">
             <a href="#projects" class="inline-block bg-red-700/90 hover:bg-red-600 text-white px-4 py-2 rounded-md">See work</a>
             <a href="#contact" class="inline-block border border-gray-600 hover:border-red-600 px-4 py-2 rounded-md text-gray-200">Contact</a>
@@ -63,13 +63,13 @@
         </div>
       </section>
 
-      <!-- About -->
+      <!-- About
       <section id="about" class="mb-12">
         <h3 class="text-2xl font-semibold text-gray-100 mb-4">About</h3>
         <div class="prose prose-invert max-w-none text-gray-300">
           <p>I'm Saidouni Amel, a third-year student at the National School of Artificial Intelligence. My journey in tech is driven by a deep curiosity and ambition to master emerging fields like AI and cybersecurity. I thrive on challenges and am always motivated to expand my skill set, whether it's diving into machine learning algorithms, exploring secure systems, or learning new programming paradigms. Beyond academics, I'm passionate about building projects that solve real-world problems and contribute to innovative solutions.</p>
         </div>
-      </section>
+      </section> -->
 
       <!-- Projects -->
   <section id="projects" class="mb-12">
@@ -153,11 +153,37 @@
               </ul>
             </div>
             <div class="mb-3">
-              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech Stack:</span> React (Frontend), Flask (Backend), Python (AI Algorithms), A* Search, Constraint Satisfaction Problem (CSP)</p>
+              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech Stack:</span> React (Frontend), Flask (Backend), Python (AI Algorithms), A* Search, Hill Climbing Algorithm with its variants</p>
             </div>
             <div class="flex gap-3">
               <a class="text-sm text-red-500 hover:underline" href="#" aria-label="View AI Fitness Planner demo">Live demo</a>
               <a class="text-sm text-gray-400 hover:underline" href="https://github.com/Aya-Mouff/Data-Workout-Planner" aria-label="View AI Fitness source code" target="_blank">Source code in github</a>
+            </div>
+          </article>
+          <!-- StudyMate Project Card -->
+          <article class="bg-[#0f0f10] border border-gray-800 rounded-lg p-6 hover:border-red-700 transition">
+            <!-- Project Image/Mockup (placeholder) -->
+            <div class="mb-4 bg-gradient-to-br from-gray-900 to-gray-800 rounded-md overflow-hidden border border-gray-700">
+              <img src="images/studymate.png" alt="StudyMate project mockup placeholder" class="w-full h-full object-cover object-top" />
+            </div>
+            <h4 class="text-xl font-semibold text-gray-100 mb-2">StudyMate — Peer-to-Peer Learning Marketplace</h4>
+            <p class="text-gray-300 mb-3">Front-end built with React.js and designed in Figma. StudyMate connects students who teach with students who learn — mentors earn while learners pay less. Includes a user dashboard, personalised quizzes, and milestone tracking.</p>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400 mb-2"><span class="text-red-500 font-semibold">Milestones:</span></p>
+              <ul class="text-sm text-gray-300 space-y-1 ml-4">
+                <li>• MVP: user onboarding, mentor listings, payments</li>
+                <li>• Dashboard: personalized progress & analytics</li>
+                <li>• Quizzes: auto-graded, adaptive questions</li>
+                <li>• Milestone tracking & certificates</li>
+                <li>• Production-ready frontend & responsive design</li>
+              </ul>
+            </div>
+            <div class="mb-3">
+              <p class="text-sm text-gray-400"><span class="text-red-500 font-semibold">Tech & role:</span> React.js (Frontend), Figma (Design), Dashboard UX, Front-end implementation</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-sm text-red-500 hover:underline"  aria-label="View StudyMate demo">Live demo</a>
+              <a class="text-sm text-gray-400 hover:underline" href="https://github.com/chaima-99/M1" aria-label="StudyMate source code" target="_blank">Source code in github</a>
             </div>
           </article>
           <!-- Add more cards as needed -->
@@ -206,7 +232,7 @@
 
       <footer class="border-t border-gray-800 pt-6 text-sm text-gray-500">Made with a dark heart and red accents.</footer>
     </div>
-  <script src="SA.js"></script>
+  <script src="../assets/js/SA.js"></script>
   </body>
   <style>
     /* Tailwind custom font family */
