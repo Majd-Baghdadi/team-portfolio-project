@@ -1,5 +1,5 @@
 # team-portfolio-project
-##
+## Contributors
 - Madjd Baghdadi - Majd-Baghdadi
 - Dhiaa Zeroual - dhia-zeroual
 - Aimene Boughenama - aymenensia
