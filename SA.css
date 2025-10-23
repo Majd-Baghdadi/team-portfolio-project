@@ -108,3 +108,45 @@ h1,h2,h3,h4{ letter-spacing: 0.6px }
     margin: 0 auto;
   }
 }
+
+/* --- Red shadow + interactive border effects for skill tags --- */
+.skill-tag{
+  background: var(--panel);
+  border: 2px solid rgba(127,9,16,0.06);
+  padding: .6rem .8rem;
+  border-radius: .5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3;
+  transition: box-shadow 220ms cubic-bezier(.2,.9,.2,1), border-color 180ms ease, transform 220ms ease;
+  cursor: default;
+}
+.skill-tag .skill-icon{ margin-right: .5rem; font-size: 1.05rem; }
+
+/* Hover / tap / focus states */
+.skill-tag:hover,
+.skill-tag:active,
+.skill-tag:focus{
+  border-color: #ff4b4b; /* bright red */
+  box-shadow: 0 18px 42px rgba(127,9,16,0.22), 0 0 24px rgba(255, 80, 80, 0.06) inset;
+  transform: translateY(-2px) scale(1.01);
+  outline: none; /* we provide our own focus styling */
+}
+
+/* Keyboard focus ring for accessibility */
+.skill-tag:focus{
+  box-shadow: 0 18px 44px rgba(127,9,16,0.28), 0 0 0 4px rgba(255,75,75,0.06);
+  border-color: #ff6b6b;
+}
+
+/* Slight pulse animation when tapped/clicked (short) */
+.skill-tag:active{
+  transition-duration: 120ms;
+  transform: translateY(0) scale(0.998);
+}
+
+/* Optional small red accent for icons */
+.skill-tag:hover .skill-icon,
+.skill-tag:focus .skill-icon{ color: #ff6b6b; transform: scale(1.05); }
+
